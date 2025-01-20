@@ -14,7 +14,7 @@ const getDefaultCart=()=>{
 export const ShopContext=createContext(); 
 
 export default function ShopContextProvider({children}) {
- const url="http://localhost:4000"; 
+ const url="https://shop-jrbe.onrender.com"; 
  let [cartItems,setcartItems]=useState(getDefaultCart())
  let [name,setName]=useState()
  let [all_product,setall_product]=useState([])
