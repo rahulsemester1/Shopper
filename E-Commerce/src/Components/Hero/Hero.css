@@ -1,0 +1,130 @@
+*{
+   margin:0;
+   padding:0;
+   box-sizing: border-box;
+  
+}
+.hero{
+   height:100vh;
+   width:100vw;
+   background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+   display: flex;
+   justify-content: space-around;
+   overflow: hidden;
+}
+.hero-left{
+   flex:1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap:20px;
+   padding-left: 180px;
+   line-height: 1.0;
+}
+.hero-left h2{
+   color:#090909;
+   font-size: 26px;
+   font-weight: 600;
+}
+.hero-left p{
+   color:#171717;
+   font-size: 70px;
+   font-weight: 700;
+   line-height: 1.1;
+}
+.hand-icon{
+   display:flex;
+   align-items: center;
+   gap:20px
+}
+.hand-icon img{
+   width:90px;
+   height:70px;
+}
+.hero-latest-btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap:15px;
+   width:250px;
+   height:60px;
+   border-radius: 75px;
+   margin-top:30px;
+   background: #ff4141;
+   color:white;
+   font-size: 18px;
+   font-weight: 500;
+}
+.hero-right{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.hero-right img{
+   height:90%;
+}
+
+@media (min-width: 800px) and (max-width: 1250px) {
+   .hero{
+      display: flex;
+     
+   }
+   .hero-left h2{
+      color:#090909;
+      font-size: 20px;
+      font-weight: 600;
+   }
+   .hero-left p{
+      color:#171717;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 1.1;
+   }
+}
+
+@media (min-width: 430px) and (max-width: 799px) {
+   .hero{
+      display: flex;
+      justify-content: space-evenly;
+     
+   }
+   .hero-left{
+      gap:10px;
+      padding-left: 70px;
+      line-height: 1.0;
+   }
+   .hero-left h2{
+      color:#090909;
+      font-size: 16px;
+      font-weight: 500;
+   }
+   .hero-left p{
+      color:#171717;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1.1;
+   }
+   .hand-icon img{
+      width:70px;
+      height:60px;
+   }
+   .hero-right img{
+      height:60%;
+      width:110%;
+   }
+   .hero-latest-btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:10px;
+      width:180px;
+      height:60px;
+      border-radius: 75px;
+      margin-top:20px;
+      background: #ff4141;
+      color:white;
+      font-size: 14px;
+      font-weight: 450;
+   }
+   
+}
