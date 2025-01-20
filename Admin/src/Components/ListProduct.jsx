@@ -5,7 +5,7 @@ import axios from "axios";
 import cross_icon from "../assets/cross_icon.png"
 
 const ListProduct = () => {
-  const url="http://localhost:4000";
+  const url="https://shop-jrbe.onrender.com";
   const [products,setProducts]=useState([])
   const [loading,setLoading]=useState(true)
 
