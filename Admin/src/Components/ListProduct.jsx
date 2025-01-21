@@ -6,6 +6,7 @@ import cross_icon from "../assets/cross_icon.png"
 
 const ListProduct = () => {
   const url="https://shop-jrbe.onrender.com";
+  // const url="http://localhost:4000";
   const [products,setProducts]=useState([])
   const [loading,setLoading]=useState(true)
 
