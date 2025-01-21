@@ -1,7 +1,7 @@
 import React from 'react'
 import exclusive_image from "../../assets/exclusive_image.png"
 
-import "./offers.css"
+import "./Offers.css"
 
 function Offers() {
   return (
