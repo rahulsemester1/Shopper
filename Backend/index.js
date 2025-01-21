@@ -20,10 +20,7 @@ const port=4000;
 //Middlewares
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
-app.use(cors({
-  origin: 'https://shop-frontend-1.onrender.com', 
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-}));
+app.use(cors());
 app.use("/images",express.static("./images"));
 app.use("/assets",express.static(path.join(import.meta.dirname,"../E-Commerce/src/assets")));
 
