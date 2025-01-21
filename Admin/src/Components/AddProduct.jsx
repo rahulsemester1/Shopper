@@ -5,8 +5,8 @@ import axios from "axios"
 import upload_area from "../assets/upload_area.svg"
 
 const AddProduct = () => {
-    // const url="https://shop-jrbe.onrender.com";
-    const url="http://localhost:4000";
+     const url="https://shop-jrbe.onrender.com";
+    // const url="http://localhost:4000";
     const [image,setImage]=useState(false);
     const [product_detail,setProduct_detail]=useState({
       category:"women",
