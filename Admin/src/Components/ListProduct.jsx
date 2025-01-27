@@ -12,7 +12,7 @@ const ListProduct = () => {
 
   const fetchData=async()=>{
     try{
-      const response=await axios.get("url/api/v1/users/products")
+      const response=await axios.get(`${url}/api/v1/users/products`)
       setProducts(response.data.data)
       
     }catch(error){
@@ -34,7 +34,7 @@ const ListProduct = () => {
 
   const delete_product=async(id)=>{
     try{
-      const response=await axios.delete("url/api/v1/users/delete",{
+      const response=await axios.delete(`${url}/api/v1/users/delete`,{
       data:{id}  
    })
       console.log("Item Deleted");     
