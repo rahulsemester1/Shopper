@@ -30,7 +30,7 @@ const AddProduct = () => {
       let formData=new FormData();
       formData.append("product",image);
       try{
-      const response=await axios.post("url/api/v1/upload",formData,
+      const response=await axios.post(`${url}/api/v1/upload`,formData,
       //   { 
       //    headers:{
       //        'Content-Type': 'multipart/form-data',
@@ -41,7 +41,7 @@ const AddProduct = () => {
 
       if(response){
          product_detail.image=response.data.imageUrl;
-         const apiData=await axios.post("url/api/v1/users/add",product_detail)
+         const apiData=await axios.post(`${url}/api/v1/users/add`,product_detail)
          apiData?alert("Product added"):alert("Failed");
            
                setProduct_detail({
