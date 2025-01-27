@@ -26,7 +26,7 @@ export default function ShopContextProvider({children}) {
 const getCart=async()=>{
   const token=localStorage.getItem("authToken")
   if(localStorage.getItem("authToken")){
-  const response=await axios.post("url/api/v1/users/getcart",{},{
+  const response=await axios.post(`${url}/api/v1/users/getcart`,{},{
     headers:{
      "authorization":`${token}`,
      "content-type":"application/json",
@@ -47,7 +47,7 @@ const getCart=async()=>{
 //api call to display all products
  const apiCall=async()=>{      
   try{
-  const response=await axios("url/api/v1/users/products");
+  const response=await axios(`${url}/api/v1/users/products`);
   console.log(response.data.data)
   if(response){
     setall_product(response.data.data)
@@ -74,7 +74,7 @@ const addToCart=async(itemId)=>{
   setcartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
   let token=localStorage.getItem("authToken")
   if(token){
-    let response=await axios.post("url/api/v1/users/cart",{itemId:itemId},{
+    let response=await axios.post(`${url}/api/v1/users/cart`,{itemId:itemId},{
        headers:{
         "authorization":`${token}`,
         "content-type":"application/json",
@@ -102,7 +102,7 @@ const removeFromCart=async(itemId)=>{
   setcartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
   let token=localStorage.getItem("authToken")
   if(token){
-    const response=await axios.post("url/api/v1/users/removecart",{itemId:itemId},{
+    const response=await axios.post(`${url}/api/v1/users/removecart`,{itemId:itemId},{
        headers:{
         "authorization":`${token}`,
         "content-type":"application/json",
