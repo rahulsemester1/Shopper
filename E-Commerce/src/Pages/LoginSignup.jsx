@@ -12,6 +12,8 @@ function LoginSignup() {
   const navigate=useNavigate();
   const [state,setState]=useState("Login")
   const {name,setName}=useContext(ShopContext)
+   const url="https://shop-jrbe.onrender.com"; 
+  // const url="http://localhost:4000";
   
   const [userInfo,setuserInfo]=useState({
     name:"",
@@ -28,7 +30,7 @@ function LoginSignup() {
   const signup=async()=>{
     try{
     console.log("signup",userInfo);
-    const response=await axios.post("http://localhost:4000/api/v1/auth/signup",userInfo) 
+    const response=await axios.post(`${url}/api/v1/auth/signup`,userInfo) 
     if(response?.data.success===true){
       alert("Signup Successfully")
       console.log(response)
@@ -47,7 +49,7 @@ function LoginSignup() {
   //Login
   const login=async()=>{
     try{
-      const response=await axios.post("http://localhost:4000/api/v1/auth/login",userInfo) 
+      const response=await axios.post(`${url}/api/v1/auth/login`,userInfo) 
       if(response?.data.success===true){
         alert("Login Successfully")
         setName(response.data.response);
