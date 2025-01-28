@@ -3,9 +3,10 @@ import Product from "../Models/schema.js"
 
 //upload file
 let uploadImage=(req,res)=>{
+   // const url="http://localhost:4000";
    res.json({
       success:1,
-      imageUrl:`http://localhost:4000/images/${req.file.filename}`,
+      imageUrl:`https://shop-jrbe.onrender.com/assets/${req.file.filename}`,
    })
 }
 
