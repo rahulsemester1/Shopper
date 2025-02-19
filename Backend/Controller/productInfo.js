@@ -2,13 +2,22 @@ import AuthModel from "../Models/authSchema.js";
 import Product from "../Models/schema.js"
 
 //upload file
+
 let uploadImage=(req,res)=>{
-   // const url="http://localhost:4000";
+   console.log(req.file)
    res.json({
       success:1,
-      imageUrl:`https://shop-jrbe.onrender.com/assets/${req.file.filename}`,
+      // imageUrl:`http://localhost:4000/images/${req.file.filename}`,
+      imageUrl:req.file.path,
    })
 }
+// let uploadImage=(req,res)=>{
+//    // const url="http://localhost:4000";
+//    res.json({
+//       success:1,
+//       imageUrl:`https://shop-jrbe.onrender.com/assets/${req.file.filename}`,
+//    })
+// }
 
 //adding user
 let addProduct=async(req,res)=>{
